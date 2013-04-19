@@ -1,29 +1,36 @@
+
+int $r;
 int $fnum;
 int $snum;
+$a = "y";
 $o = 0;
+
+while ($a eq "y") {
 
 print "whats the first number?\n";
 $fnum = <>;
 print "whats the second number?\n";
 $snum = <>;
 print "whats the operation?\n";
-print "1: addition\n";
-print "2: subtraction\n";
-print "3: multiplication\n";
-print "4: division\n";
 $o = <>;
+chomp($o);
 
-if ($o == 1) {
+if ($o == "+") {
 	$r = $fnum + $snum;
 }
-if ($o == 2) {
+elsif ($o == "-") {
 	$r = $fnum - $snum;
 }
-if ($o == 3) {
+elsif ($o == "*") {
 	$r = $fnum * $snum;
 }
-if ($o == 4) {
+elsif ($o == "/") {
 	$r = $fnum / $snum;
 }
 
-print $r;
+print "$r \n";
+print "Type Y to do another calculation. Type N to quit.\n";
+$a = <>;
+chomp ($a);
+
+}

@@ -32,5 +32,4 @@ print "$r \n";
 print "Type Y to do another calculation. Type N to quit.\n";
 $a = <>;
 chomp ($a);
-
 }
